@@ -72,8 +72,6 @@ helmet-detection/
 ## ⚙️ Setup & Run Locally
 
 1 Clone the repository
-
-```bash
 git clone https://github.com/your-username/Helmet-Detection-using-CV.git
 cd Helmet-Detection-using-CV
 
