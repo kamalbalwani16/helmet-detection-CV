@@ -46,8 +46,8 @@ This project aims to improve road safety by automating helmet detection in traff
 
 ---
 
-**📂 Project Structure**
-
+## 📂 Project Structure
+.
 helmet-detection/
 │
 ├── app.py
@@ -96,5 +96,4 @@ http://127.0.0.1:5000
 💰 Automated traffic violation system
 ☁️ Cloud deployment
 
-## 📂 Project Structure
-.
+
