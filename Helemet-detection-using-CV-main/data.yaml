@@ -1,0 +1,7 @@
+path: C:/Users/VIDIT KUMAR SINGH/OneDrive/Documents/helmet-detection/yolo_dataset
+train: images/train
+val: images/val
+
+names:
+  0: helmet
+  1: no_helmet

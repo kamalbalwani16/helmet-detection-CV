@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helmet Detection System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>Helmet Detection System for Traffic Safety</h1>
+      <p>
+        Upload a traffic image and detect whether riders are wearing helmets using a custom-trained YOLOv8 model.
+      </p>
+    </header>
+
+    <section class="top-layout">
+      <div class="upload-panel card">
+        <h2>Upload Image</h2>
+        <p class="subtext">Supported formats: JPG, JPEG, PNG, WEBP, JFIF</p>
+
+        <label for="fileInput" class="file-label">Choose an image</label>
+
+        <div class="drop-zone" id="dropZone">
+          <input type="file" id="fileInput" accept="image/*" title="Upload an image file">
+          <div class="drop-content">
+            <div class="upload-icon">⬆</div>
+            <p class="drop-title">Drag & drop an image here</p>
+            <p class="drop-subtitle">or click to browse</p>
+          </div>
+        </div>
+
+        <button id="detectBtn">Run Detection</button>
+
+        <div class="status-row">
+          <div class="spinner hidden" id="spinner"></div>
+          <p id="status"></p>
+        </div>
+      </div>
+
+      <div class="summary-panel card">
+        <h2>Detection Summary</h2>
+
+        <div class="summary-grid">
+          <div class="mini-stat">
+            <span>Total People Detected</span>
+            <strong id="totalCount">0</strong>
+          </div>
+
+          <div class="mini-stat">
+            <span>Helmet</span>
+            <strong id="helmetCount">0</strong>
+          </div>
+
+          <div class="mini-stat">
+            <span>No Helmet</span>
+            <strong id="noHelmetCount">0</strong>
+          </div>
+
+          <div class="mini-stat compliance-box">
+            <span>Compliance</span>
+            <strong id="compliance">0%</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="preview-layout">
+      <div class="card preview-card">
+        <div class="preview-header">
+          <h2>Original Image</h2>
+        </div>
+        <div class="image-frame">
+          <img id="originalPreview" src="" alt="Original Preview" />
+          <div class="placeholder" id="originalPlaceholder">No image selected yet</div>
+        </div>
+      </div>
+
+      <div class="card preview-card">
+        <div class="preview-header result-header">
+          <h2>Detection Result</h2>
+          <a id="downloadBtn" class="download-btn hidden" href="#" download>Download Result</a>
+        </div>
+        <div class="image-frame">
+          <img id="resultPreview" src="" alt="Detection Result" />
+          <div class="placeholder" id="resultPlaceholder">Detection result will appear here</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

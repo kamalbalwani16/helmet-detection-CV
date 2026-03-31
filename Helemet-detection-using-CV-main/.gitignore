@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+
+runs/
+dataset1/
+dataset2/
+yolo_dataset/
+
+static/uploads/
+static/results/
+
+venv/
+.env
+
+.DS_Store
+Thumbs.db
